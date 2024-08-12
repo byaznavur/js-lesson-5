@@ -109,7 +109,7 @@
 //   return n < 10 ? "0" + n : n;
 // };
 
-// const swapTime = (n) => (n < 10 ? "0" + n : n);
+// cnst swapTime = (n) => (n < 10 ? "0" + n : n);
 
 // const timeToHMS = (T) => {
 //   let H = Math.trunc(T / 3600);

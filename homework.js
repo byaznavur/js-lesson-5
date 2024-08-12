@@ -3,26 +3,78 @@
 
 // ﻿DARSDA KO’RILISHI KERAK BO’LGAN MASALALAR
 
-// Func1. Tomoni a va b ga teng bo’lgan to’g’ri to’rtburchakning yuzasi va perimetrini hisoblovchi rectangle(a, b) nomli funksiya hosil qiling. QYM
+//! Func1. Tomoni a va b ga teng bo’lgan to’g’ri to’rtburchakning yuzasi va perimetrini hisoblovchi rectangle(a, b) nomli funksiya hosil qiling. QYM
 // Input: rectangle (6, 9)
 // Output: 54, 30
+// function rectangle(a, b) {
+//   let A = a * b;
+//   let S = 2 * (a + b);
+//   console.log(A, S);
+// }
 
-// Func2. Tomoni a ga teng bo’lgan teng tomonli uchburchakning yuzasi va perimetrini hisoblovchi triangle(a) nomli funksiya hosil qiling. QYM
+// rectangle(2, 3);
+//! Func2. Tomoni a ga teng bo’lgan teng tomonli uchburchakning yuzasi va perimetrini hisoblovchi triangle(a) nomli funksiya hosil qiling. QYM
 // triangle (6)
+// function triangle(a) {
+//   let A = a * a;
+//   let S = 2 * a;
 
-// Func3.  1 dan n ga sonlar yig’indisini qaytaruvchi sum(n) nomli funksiya hosil qiling. QY
+//   console.log(A, S);
+// }
 
-// Func4. isSquare (k) mantiqiy funksiyasini hosil qiling. (k > 0). Agar k biror butun sonning kvadrati bo'lsa - true, aks holda false qiymat qaytarilsin. QY
+// triangle(6);
+//! Func3.  1 dan n ga sonlar yig’indisini qaytaruvchi sum(n) nomli funksiya hosil qiling. QY
+// const sum = (n) => {
+//   let res = 0;
+//   for (let i = 0; i <= n; i++) {
+//     res += i;
+//   }
+
+//   return res;
+// };
+
+// let ress = sum(10);
+// console.log(ress);
+//! Func4. isSquare (k) mantiqiy funksiyasini hosil qiling. (k > 0). Agar k biror butun sonning kvadrati bo'lsa - true, aks holda false qiymat qaytarilsin. QY
 // isSquare(10) => false
 // isSquare(25) => true
+// const isSquare = (k) => {
+//   return Number.isInteger(Math.sqrt(k));
+// };
+// const res = isSquare(25);
 
-// Func5. Butun qiymat qaytaruvchi digitCount(k) funksiyasini hosil qiling. (k > 0). Funksiya k ning raqamlari sonini qaytarsin. QY
+// console.log(res);
+//! Func5. Butun qiymat qaytaruvchi digitCount(k) funksiyasini hosil qiling. (k > 0). Funksiya k ning raqamlari sonini qaytarsin. QY
 // digitCount(8791) => 4
+// const digitCount = (k) => {
+//   let count = 0;
 
-// Func6. n natural sonning raqamlari yig'indisini hisoblovchi getDigitSum(n) nomli funksiya hosil qiling. QY
+//   while (k != 0) {
+//     k = Math.trunc(k / 10);
+//     count++;
+//   }
+
+//   return count;
+// };
+
+// let res = digitCount(2132);
+// console.log(res);
+//! Func6. n natural sonning raqamlari yig'indisini hisoblovchi getDigitSum(n) nomli funksiya hosil qiling. QY
 // getDigitSum (456) => 15
+// const getDigitSum = (n) => {
+//   let sum = 0;
 
-// Func7. timeToHMS(T) funksiyasini hosil qiling. Funksiya berilgan T sekundni, H - soat, M - minut, S - sekundlarga ajratsin. QY
+//   while (n != 0) {
+//     let digit = n % 10;
+//     sum += digit;
+//     n = Math.floor(n / 10);
+//   }
+//   return sum;
+// };
+
+// const res = getDigitSum(1233);
+// console.log(res);
+//! Func7. timeToHMS(T) funksiyasini hosil qiling. Funksiya berilgan T sekundni, H - soat, M - minut, S - sekundlarga ajratsin. QY
 // timeToHMS(400) => 00:06:40
 
 // Func8. incTime(H, M, S) funksiyasini hosil qiling. H - soat, M - minut, S - sekund. Funksiya berilgan vaqtdan 1 sekund keyingi vaqtni ko’rsatsin. QY
@@ -31,22 +83,71 @@
 // incTime(1, 59, 59) => 02:00:00
 // incTime(23, 59, 59) => 00:00:00
 
-// UYGA VAZIFA
+// ?UYGA VAZIFA
 
-// Func1. a sonning ixtiyoriy n-darajasini hisoblovchi power(a, n) nomli funksiya hosil qiling. QY
+//! Func1. a sonning ixtiyoriy n-darajasini hisoblovchi power(a, n) nomli funksiya hosil qiling. QY
 // power(3, 5) => 243
+// const power = (a, n) => a ** n;
+// const res = power(3, 4);
+// console.log(res);
 
-// Func2. 2 ta a va b sonning o'rta arifmetigi (a + b) / 2 va geometrigi (a + b) ^ (1 / 2) hisoblovchi mean(a, b) nomli funksiya hosil qiling. QYM
+//! Func2. 2 ta a va b sonning o'rta arifmetigi (a + b) / 2 va geometrigi (a + b) ^ (1 / 2) hisoblovchi mean(a, b) nomli funksiya hosil qiling. QYM
 // mean(12, 48) => 30, 24
 
+// const mean = (a, b) => {
+//   let med = (a + b) / 2;
+//   let geo = (a + b) ** (1 / 2);
+
+//   console.log(med, geo);
+// };
+
+// mean(3, 4);
 // Func3. Haqiqiy sonning ishorasini aniqlovchi sign(n) nomli funksiya hosil qiling. Funksiya argumenti noldan kichik bo'lsa -1; noldan katta bo'lsa 1; nolga teng bo'lsa 0 qiymat qaytarsin. QY
 // sign(10) => 1
+// const sign = (n) => {
+//   let res;
 
-// Func4. A*x^2 + B*x + C = 0 ko'rinishidagi tenglama kvadrat tenglama deyiladi. (A noldan farqli son). Kvadrat tenglamaning ildizlar sonini aniqlovchi numberOfRoots(A, B, C) nomli funksiya hosil qiling. D = B^2 - 4*A*C. Agar D > 0 bo’lsa 2 ta, D = 0 bo’lsa 1 ta, D < 0 bo’lsa 0 ta. QY
+//   if (n > 0) {
+//     res = 1;
+//   } else if (n < 0) {
+//     res = -1;
+//   } else {
+//     res = 0;
+//   }
+//   return res;
+// };
+// const sum = sign(10);
+// console.log(sum);
+//!  Func4. A*x^2 + B*x + C = 0 ko'rinishidagi tenglama kvadrat tenglama deyiladi. (A noldan farqli son). Kvadrat tenglamaning ildizlar sonini aniqlovchi numberOfRoots(A, B, C) nomli funksiya hosil qiling. D = B^2 - 4*A*C. Agar D > 0 bo’lsa 2 ta, D = 0 bo’lsa 1 ta, D < 0 bo’lsa 0 ta. QY
 // numberOfRoots (1, -6, 9) => 1
+// const numberOfRoots = (A, B, C) => {
+//   let D = B ** 2 - 4 * A * C;
+//   let res;
+//   if (D > 0) {
+//     res = 2 + " ta ildiz";
+//   } else if (D == 0) {
+//     res = 0 + " 1 ta ildiz";
+//   } else {
+//     res = "Ildizi yo'q";
+//   }
 
-// Func5. Doiraning yuzini hisoblovchi areaCircle(R) nomli funksiya hosil qiling. Doiraning yuzi S = π*R^2 orqali hisoblanadi. QY
+//   return res;
+// };
 
+// let sum = numberOfRoots(1, 2, 3);
+
+// console.log(sum);
+
+//!Func5. Doiraning yuzini hisoblovchi areaCircle(R) nomli funksiya hosil qiling. Doiraning yuzi S = π*R^2 orqali hisoblanadi. QY
+
+// const areaCircle = (R) => {
+//   let PI = 3.14;
+//   let area = PI * R ** 2;
+//   return area;
+// };
+
+// let res = areaCircle(3);
+// console.log(res);
 // Func6. A va B sonlari orasidagi sonlar yig'indisini hisoblovchi sumRange(A, B) nomli funksiya hosil qiling. Agar A > B bo'lsa, funksiya 0 qiymat qaytaradi. QY
 // sumRange(8, 10) => 27
 
