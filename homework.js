@@ -148,21 +148,80 @@
 
 // let res = areaCircle(3);
 // console.log(res);
-// Func6. A va B sonlari orasidagi sonlar yig'indisini hisoblovchi sumRange(A, B) nomli funksiya hosil qiling. Agar A > B bo'lsa, funksiya 0 qiymat qaytaradi. QY
+//! Func6. A va B sonlari orasidagi sonlar yig'indisini hisoblovchi sumRange(A, B) nomli funksiya hosil qiling. Agar A > B bo'lsa, funksiya 0 qiymat qaytaradi. QY
 // sumRange(8, 10) => 27
+// const sumRange = (A, B) => (res = A > B ? 0 : A + B);
 
-// Func7. Arifmetik amallarni bajaruvchi calc(A, B, S) funksiyasini hosil qiling. A va B haqiqiy sonlar. S o'zgaruchisi orqali bajariladigan arifmetik amal aniqlanadi. “-” – ayirish, “*” – ko'paytirish, “/” - bo'lish, “+” - qo'shish va boshqa belgilar uchun 0 qaytarsin. QY
+// const ress = sumRange(2, 4);
+
+// console.log(ress);
+//! Func7. Arifmetik amallarni bajaruvchi calc(A, B, S) funksiyasini hosil qiling. A va B haqiqiy sonlar. S o'zgaruchisi orqali bajariladigan arifmetik amal aniqlanadi. “-” – ayirish, “*” – ko'paytirish, “/” - bo'lish, “+” - qo'shish va boshqa belgilar uchun 0 qaytarsin. QY
 // calc(10, 15, “*”) => 150
 // calc(7, 8, “+”) => 15
+// const calc = (a, b, s) => {
+//   let res;
 
-// Func8. Butun sonning juft - toqligini aniqlovchi isEven(K) funksiyasini hosil qiling. Funksiya K juft son bo'lsa - true, aks xolda false qiymat qaytarsin. QY
+//   switch (s) {
+//     case "+":
+//       res = a + b;
+//       break;
+//     case "-":
+//       res = a + b;
+//       break;
+//     case "*":
+//       res = a + b;
+//       break;
+//     case "-":
+//       res = a + b;
+//       break;
+
+//     default:
+//       res = 0;
+//       break;
+//   }
+
+//   return res;
+// };
+
+// const sum = calc(12, 23, "+");
+
+// console.log(sum);
+//! Func8. Butun sonning juft - toqligini aniqlovchi isEven(K) funksiyasini hosil qiling. Funksiya K juft son bo'lsa - true, aks xolda false qiymat qaytarsin. QY
 // isEven(10) => true
-
-// Func9. Kiritilgan 3 ta a, b, c sonlarning eng kichigini, o’rtachasini va eng kattasini chiqaruvchi sortABC(a, b, c) nomli dastur tuzing. QYM
+// const isEven = (K) => (K % 2 === 0 ? true : false);
+// const res = isEven(10);
+// console.log(res);
+//! Func9. Kiritilgan 3 ta a, b, c sonlarning eng kichigini, o’rtachasini va eng kattasini chiqaruvchi sortABC(a, b, c) nomli dastur tuzing. QYM
 // sortABC(10, 5, 8) => 5, 8, 10
+// const sortABC = (a, b, c) => {
+//     let res;
 
-// Func10. isPowerN(K, N) mantiqiy funksiyasini hosil qiling. (K > 0). Agar K soni N soninig biror darajasi bo'lsa - true, aks xolda false qiymat qaytarilsin. QY
+//     if (a >= b && b >= c) {
+//       res = `${a} - ${b} - ${c}`;
+//     } else if (a >= c && c >= b) {
+//       res = `${a} - ${c} - ${b}`;
+//     } else if (b >= a && a >= c) {
+//       res = `${b} - ${a} - ${c}`;
+//     } else if (b >= c && c >= a) {
+//       res = `${b} - ${c} - ${a}`;
+//     } else if (c >= a && a >= b) {
+//       res = `${c} - ${a} - ${b}`;
+//     } else {
+//       res = `${c} - ${b} - ${a}`;
+//     }
 
+//     return res;
+//   };
+
+//   const sum = sortABC(1, 4, 3);
+//   console.log(sum);
+
+//! Func10. isPowerN(K, N) mantiqiy funksiyasini hosil qiling. (K > 0). Agar K soni N soninig biror darajasi bo'lsa - true, aks xolda false qiymat qaytarilsin. QY
+// const isPowerN = (K, N) => (N == Math.sqrt(K) ? true : false);
+
+// const res = isPowerN(25, 5);
+
+// console.log(res);
 // Func11. isPrime(N) mantiqiy funksiyasini hosil qiling. (N > 0). Agar N soni tub bo'lsa - true, aks holda false qiymat qaytarilsin. QY
 // isPrime(7)  => true
 
