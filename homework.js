@@ -1,8 +1,6 @@
 // QY - qiymat qaytaruvchi
 // QYM - qiymat qaytarmaydigan
 
-const { number } = require("prop-types");
-
 //? => DARSDA KO’RILISHI KERAK BO’LGAN MASALALAR
 
 //! Func1. Tomoni a va b ga teng bo’lgan to’g’ri to’rtburchakning yuzasi va perimetrini hisoblovchi rectangle(a, b) nomli funksiya hosil qiling. QYM
@@ -37,30 +35,132 @@ const { number } = require("prop-types");
 
 //! Func1. a sonning ixtiyoriy n-darajasini hisoblovchi power(a, n) nomli funksiya hosil qiling. QY
 // power(3, 5) => 243
+// const power = (a, n) => {
+//   return a ** n;
+// };
 
+// let res = power(2, 3);
+// console.log(res);
 //! Func2. 2 ta a va b sonning o'rta arifmetigi (a + b) / 2 va geometrigi (a + b) ^ (1 / 2) hisoblovchi mean(a, b) nomli funksiya hosil qiling. QYM
 // mean(12, 48) => 30, 24
+// function mean(a, b) {
+//   let arithmeticMean = (a + b) / 2;
+//   let geometricMean = Math.sqrt(a * b);
+//   return arithmeticMean, geometricMean;
+// }
 
+// let res = mean(12, 48);
+
+// console.log(res);
 //! Func3. Haqiqiy sonning ishorasini aniqlovchi sign(n) nomli funksiya hosil qiling. Funksiya argumenti noldan kichik bo'lsa -1; noldan katta bo'lsa 1; nolga teng bo'lsa 0 qiymat qaytarsin. QY
 // sign(10) => 1
+// function sign(n) {
+//   if (n < 0) {
+//     return -1;
+//   } else {
+//     return 1;
+//   }
+// }
+
+// let res = sign(n);
+// console.log(res);
 
 //! Func4. A*x^2 + B*x + C = 0 ko'rinishidagi tenglama kvadrat tenglama deyiladi. (A noldan farqli son). Kvadrat tenglamaning ildizlar sonini aniqlovchi numberOfRoots(A, B, C) nomli funksiya hosil qiling. D = B^2 - 4*A*C. Agar D > 0 bo’lsa 2 ta, D = 0 bo’lsa 1 ta, D < 0 bo’lsa 0 ta. QY
 // numberOfRoots (1, -6, 9) => 1
-
+// function numberOfRoots(A, B, C) {
+//   D = B ** 2 - 4 * A * C;
+//   let checkSqrt = 0;
+//   if (D > 0) {
+//     checkSqrt = 2;
+//   } else if ((D = 0)) {
+//     checkSqrt = 1;
+//   } else {
+//     checkSqrt = 0;
+//   }
+// }
 //! Func5. Doiraning yuzini hisoblovchi areaCircle(R) nomli funksiya hosil qiling. Doiraning yuzi S = π*R^2 orqali hisoblanadi. QY
-
+// function areaCircle(R) {
+//   let S = Math.PI * R ** 2;
+//   return S;
+// }
 //! Func6. A va B sonlari orasidagi sonlar yig'indisini hisoblovchi sumRange(A, B) nomli funksiya hosil qiling. Agar A > B bo'lsa, funksiya 0 qiymat qaytaradi. QY
 // sumRange(8, 10) => 27
+// function sumRange(A, B) {
+//   let sum = 0;
+//   if (B > A) {
+//     for (let i = A; i <= B; i++) {
+//       sum += i;
+//     }
+
+//     return sum;
+//   }
+// }
+
+// let res = sumRange(8, 10);
+
+// console.log(res);
 
 //! Func7. Arifmetik amallarni bajaruvchi calc(A, B, S) funksiyasini hosil qiling. A va B haqiqiy sonlar. S o'zgaruchisi orqali bajariladigan arifmetik amal aniqlanadi. “-” – ayirish, “*” – ko'paytirish, “/” - bo'lish, “+” - qo'shish va boshqa belgilar uchun 0 qaytarsin. QY
 // calc(10, 15, “*”) => 150
 // calc(7, 8, “+”) => 15
-
+// function calc(A, B, S) {
+//   let result = 0;
+//   switch (S) {
+//     case "+":
+//       result = A + B;
+//       break;
+//     case "-":
+//       result = A - B;
+//       break;
+//     case "*":
+//       result = A * B;
+//       break;
+//     case "/":
+//       result = A / B;
+//       break;
+//     default:
+//       result = " Hello world!";
+//   }
+//   return result;
+// }
 //! Func8. Butun sonning juft - toqligini aniqlovchi isEven(K) funksiyasini hosil qiling. Funksiya K juft son bo'lsa - true, aks xolda false qiymat qaytarsin. QY
 // isEven(10) => true
-
+// function isEven(n) {
+//   return n % 2 == 0;
+// }
+// let res = isEven(10);
+// console.log(res);
 //! Func9. Kiritilgan 3 ta a, b, c sonlarning eng kichigini, o’rtachasini va eng kattasini chiqaruvchi sortABC(a, b, c) nomli dastur tuzing. QYM
 // sortABC(10, 5, 8) => 5, 8, 10
+// function sortABC(a, b, c) {
+//   let min, mid, max;
+
+//   // Eng kichik qiymatni aniqlash
+//   if (a <= b && a <= c) {
+//     min = a;
+//   } else if (b <= a && b <= c) {
+//     min = b;
+//   } else {
+//     min = c;
+//   }
+
+//   // Eng katta qiymatni aniqlash
+//   if (a >= b && a >= c) {
+//     max = a;
+//   } else if (b >= a && b >= c) {
+//     max = b;
+//   } else {
+//     max = c;
+//   }
+
+//   // O'rtacha qiymatni aniqlash
+//   mid = a + b + c - min - max;
+
+//   return `${min}, ${mid}, ${max}`;
+// }
+
+// const res = sortABC(10, 5, 8);
+// console.log(res); // Natija: 5, 8, 10
 
 //! Func10. isPowerN(K, N) mantiqiy funksiyasini hosil qiling. (K > 0). Agar K soni N soninig biror darajasi bo'lsa - true, aks xolda false qiymat qaytarilsin. QY
 // function isPowerN(K, N) {
