@@ -78,19 +78,20 @@
 // 12 / 10 = 1 // 5
 // 1 / 10 = 0 // 6
 
-// const getDigitSum = (n) => {
-//   let sum = 0;
-//   while (n != 0) {
-//     let r = n % 10;
-//     sum += r;
-//     n = Math.trunc(n / 10);
-//   }
-//   return sum;
-// };
+const getDigitSum = (n) => {
+  let sum = 0;
+  while (n != 0) {
+    let r = n % 10;
+    sum += r;
+    n = Math.trunc(n / 10);
+    console.log(r);
+  }
+  return sum;
+};
 
-// let d = getDigitSum(123579);
+let d = getDigitSum(123579);
 
-// console.log(d);
+console.log(d);
 
 // 123579 / 10 = 12357 // 9
 // 12357 / 10 = 1235 // 7

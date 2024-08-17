@@ -46,19 +46,19 @@
 // console.log(res);
 //! Func5. Butun qiymat qaytaruvchi digitCount(k) funksiyasini hosil qiling. (k > 0). Funksiya k ning raqamlari sonini qaytarsin. QY
 // digitCount(8791) => 4
-// const digitCount = (k) => {
-//   let count = 0;
+const digitCount = (k) => {
+  let count = 0;
 
-//   while (k != 0) {
-//     k = Math.trunc(k / 10);
-//     count++;
-//   }
+  while (k != 0) {
+    k = Math.trunc(k / 10);
 
-//   return count;
-// };
+    count++;
+  }
+  return count;
+};
 
-// let res = digitCount(2132);
-// console.log(res);
+let res = digitCount(2132);
+console.log(res);
 //! Func6. n natural sonning raqamlari yig'indisini hisoblovchi getDigitSum(n) nomli funksiya hosil qiling. QY
 // getDigitSum (456) => 15
 // const getDigitSum = (n) => {
@@ -222,15 +222,59 @@
 // const res = isPowerN(25, 5);
 
 // console.log(res);
-// Func11. isPrime(N) mantiqiy funksiyasini hosil qiling. (N > 0). Agar N soni tub bo'lsa - true, aks holda false qiymat qaytarilsin. QY
+//! Func11. isPrime(N) mantiqiy funksiyasini hosil qiling. (N > 0). Agar N soni tub bo'lsa - true, aks holda false qiymat qaytarilsin. QY
 // isPrime(7)  => true
 
-// Func12. isPrime funksiyasi orqali N gacha bo’lgan sonlar ichidan nechtasi tub ekanini aniqlovchi numberOfPrime(N) nomli dastur tuzilsin. QY
-// numberOfPrime(10) => 4
+// const isPrime = (n) => {
+//   let count = 0;
+//   let res;
+//   for (let i = 0; i <= n; i++) {
+//     if (n % i == 0) {
+//       count++;
+//       res = count > 2 ? false : true;
+//     }
+//   }
+//   console.log(count);
+//   return res;
+// };
 
-// Func13. Butun qiymat qaytaruvchi digitNth(K, N) funksiyasini hosil qiling. (K > 0). Funksiya K sonining N-raqamini qaytarsin. Agar K soni raqamlari N dan kichik bo'lsa, -1 qaytarilsin. digitCount funksiyasidan foydalaning.QY
+// const result = isPrime(3);
+// console.log(result);
+
+// !Func12. isPrime funksiyasi orqali N gacha bo’lgan sonlar ichidan nechtasi tub ekanini aniqlovchi numberOfPrime(N) nomli dastur tuzilsin. QY
+// numberOfPrime(10) => 4
+// const isPrime = (n) => {
+//   let count = 0;
+//   let res;
+//   for (let i = 0; i <= n; i++) {
+//     if (n % i == 0) {
+//       count++;
+//       res = count > 2 ? false : true;
+//     }
+//   }
+//   console.log(count);
+//   return res;
+// };
+
+// const result = isPrime(3);
+// console.log(result);
+
+//! Func13. Butun qiymat qaytaruvchi digitNth(K, N) funksiyasini hosil qiling. (K > 0). Funksiya K sonining N-raqamini qaytarsin. Agar K soni raqamlari N dan kichik bo'lsa, -1 qaytarilsin. digitCount funksiyasidan foydalaning.QY
 // digitNth(105782, 5) => 8
 // digitNth(1057, 5) => -1
+
+const digitNth = (K, N) => {
+  let res = -1;
+  const digits = K.toString().split("").reverse();
+  if (digits.length < N) {
+    return res;
+  }
+  res = parseInt(digits[N - 1]);
+  return res;
+};
+
+const a = digitNth(143251, 5);
+console.log(a); // 4
 
 // Func14. N sonining raqamlaridan teskari tartibda hosil bo’ladigan sonni qaytaruvchi inverseNumber(N) nomli funksiya hosil qiling. QY
 // inverseNumber(56814) => 41865
