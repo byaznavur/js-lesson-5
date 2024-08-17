@@ -78,42 +78,100 @@
 //! Func15. isPalindrom(N) mantiqiy funksiyasini hosil qiling. (N > 0). Agar N soni palindrom bo'lsa - true, aks holda false qiymat qaytarilsin. inverseNumber funksiyasidan foydalaning. Palindromik son - chapda ham, o’ngdan ham o’qilganda bir xil bo’ladigan son. Masalan, 123321, 78987. QY
 // isPalindrom(1678761) => true
 
-//! Func16. 1 dan N ga sonlar ko’paytmasini qaytaruvchi factorial(N) nomli funksiya hosil qiling. Agar N manfiy bo’lib qolsa, 1 qaytarilsin. QY
+// function isPalindrom(N) {
+//   let sumNum = 0;
+//   let org = N;
+//   while (N > 0) {
+//     sumNum = sumNum * 10 + (N % 10);
+//     N = Math.floor(N / 10);
+//   }
+//   return sumNum === org;
+// }
 
+// console.log(isPalindrom(1678761));
+//! Func16. 1 dan N ga sonlar ko’paytmasini qaytaruvchi factorial(N) nomli funksiya hosil qiling. Agar N manfiy bo’lib qolsa, 1 qaytarilsin. QY
+// function factorial(N) {
+//   let sum = 1;
+
+//   for (let i = 1; i <= N; i++) {
+//     if (N > 0) {
+//       sum *= i;
+//     } else {
+//       sum = -1;
+//     }
+//   }
+
+//   console.log(sum);
+// }
+
+// factorial(3);
 //! Func17. 1 dan N bo’lgan sonlar ichida 3 bo’linadigan sonlar yig’indisini hisoblovchi getSum3(N) nomli dastur yozing.
 // getSum3(15) => 45
+// function getSum3(N) {
+//   let oddSum = 0;
 
+//   for (let i = 0; i <= N; i++) {
+//     if (i % 3 == 0) {
+//       oddSum += i;
+//     }
+//   }
+
+//   console.log(oddSum);
+// }
+// getSum3(15);
 //! Func18. 1 dan N ga sonlar bo’lgan juft va toqlar sonlar yig’indisini qaytaruvchi sumOddEven(N) nomli funksiya hosil qiling. QYM
 // sumOddEven(10) => 30, 25
+// function sumOddEven(N) {
+//   let oddSum = 0;
+//   let evenSum = 0;
+
+//   for (let i = 0; i <= N; i++) {
+//     if (i % 2 == 0) {
+//       oddSum += i;
+//     } else {
+//       evenSum += i;
+//     }
+//   }
+
+//   console.log(oddSum);
+//   console.log(evenSum);
+// }
+
+// sumOddEven(10);
 
 //! Func19. invertTime(H, M, S) funksiyasini hosil qiling. H - soat, M - minut, S - sekund. Funksiya orqali berilgan soat, minut va sekundni T sekundga almashtiruvchi programma tuzilsin.
 // invertTime(0, 6, 40) => 400
-
+// function invertTime(H, M, S) {
+//   let res = H * 3600 + M * 60 + S;
+//   return res;
+// }
+// const sum = invertTime(0, 6, 40);
+// console.log(sum);
 //! Func20. decTime(H, M, S) funksiyasini hosil qiling. H - soat, M - minut, S - sekund. Funksiya berilgan vaqtdan 1 sekund oldingi vaqtni ko’rsatsin.
 // decTime(0, 6, 40) => 00:06:39
 
-const decTime = (H, M, S) => {
-  if (S !== 0) {
-    S--;
-  } else {
-    S = 59;
-    if (M !== 0) {
-      M--;
-    } else {
-      M = 59;
-      if (H !== 0) {
-        H--;
-      } else {
-        H = 23;
-      }
-    }
-  }
+// const decTime = (H, M, S) => {
+//   if (S !== 0) {
+//     S--;
+//   } else {
+//     S = 59;
+//     if (M !== 0) {
+//       M--;
+//     } else {
+//       M = 59;
+//       if (H !== 0) {
+//         H--;
+//       } else {
+//         H = 23;
+//       }
+//     }
+//   }
 
-  return H + ":" + (M < 10 ? "0" + M : M) + ":" + (S < 10 ? "0" + S : S);
-};
+//   return H + ":" + (M < 10 ? "0" + M : M) + ":" + (S < 10 ? "0" + S : S);
+// };
 
-const res = decTime(11, 0, 0);
-console.log(res);
+// const res = decTime(11, 0, 0);
+// console.log(res);
 
 //! Func21. Mantiqiy qiymat qaytaruvchi isLeapYear(Y) funksiyasini hosil qiling. Funksiya berilgan Y - yil kabisa yili bo'lsa true, aks holda false qiymat qaytarsin.
 
