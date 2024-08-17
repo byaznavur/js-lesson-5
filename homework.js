@@ -1,6 +1,8 @@
 // QY - qiymat qaytaruvchi
 // QYM - qiymat qaytarmaydigan
 
+const { number } = require("prop-types");
+
 //? => DARSDA KO’RILISHI KERAK BO’LGAN MASALALAR
 
 //! Func1. Tomoni a va b ga teng bo’lgan to’g’ri to’rtburchakning yuzasi va perimetrini hisoblovchi rectangle(a, b) nomli funksiya hosil qiling. QYM
@@ -61,20 +63,83 @@
 // sortABC(10, 5, 8) => 5, 8, 10
 
 //! Func10. isPowerN(K, N) mantiqiy funksiyasini hosil qiling. (K > 0). Agar K soni N soninig biror darajasi bo'lsa - true, aks xolda false qiymat qaytarilsin. QY
-
+// function isPowerN(K, N) {
+//   return N === Math.sqrt(K);
+// }
+// const res = isPowerN(15, 5);
+// console.log(res);
 //! Func11. isPrime(N) mantiqiy funksiyasini hosil qiling. (N > 0). Agar N soni tub bo'lsa - true, aks holda false qiymat qaytarilsin. QY
 // isPrime(7)  => true
+// function isPrime(N) {
+//   let count = 0;
+//   for (let i = 0; i <= N; i++) {
+//     if (N % i == 0) {
+//       count++;
+//     }
+//   }
+//   if (count > 2) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// const res = isPrime(4);
 
+// console.log(res);
 //! Func12. isPrime funksiyasi orqali N gacha bo’lgan sonlar ichidan nechtasi tub ekanini aniqlovchi numberOfPrime(N) nomli dastur tuzilsin. QY
 // numberOfPrime(10) => 4
+// function isPrime(N) {
+//   if (N <= 1) return false; // 1 va undan kichik sonlar tub emas
+//   let count = 0;
+//   for (let i = 1; i <= N; i++) {
+//     if (N % i === 0) {
+//       count++;
+//     }
+//   }
+//   return count === 2; // Agar bo'luvchilar soni 2 bo'lsa, tub
+// }
+
+// function numberOfPrime(N) {
+//   let count = 0;
+//   for (let i = 2; i <= N; i++) { // 2 dan boshlab tekshiradi, chunki 1 tub son emas
+//     if (isPrime(i)) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// const res = numberOfPrime(10); // Misol uchun 10 gacha bo'lgan tub sonlar: 2, 3, 5, 7 - jami 4 ta.
+// console.log(res); // Natija: 4
 
 //! Func13. Butun qiymat qaytaruvchi digitNth(K, N) funksiyasini hosil qiling. (K > 0). Funksiya K sonining N-raqamini qaytarsin. Agar K soni raqamlari N dan kichik bo'lsa, -1 qaytarilsin. digitCount funksiyasidan foydalaning.QY
 // digitNth(105782, 5) => 8
 // digitNth(1057, 5) => -1
+// function digitNth(K, N) {
+//   for (let i = 1; i < N; i++) {
+//     K = Math.floor(K / 10);
+//   }
+//   if (K === 0) {
+//     return -1;
+//   }
+//   return K % 10;
+// }
+// console.log(digitNth(105782, 1));
+// console.log(digitNth(1057, 5));
 
 //! Func14. N sonining raqamlaridan teskari tartibda hosil bo’ladigan sonni qaytaruvchi inverseNumber(N) nomli funksiya hosil qiling. QY
 // inverseNumber(56814) => 41865
+// function inverseNumber(N) {
+//   let num = 0;
 
+//   while (N > 0) {
+//     num = num * 10 + (N % 10);
+//     N = Math.floor(N / 10);
+//   }
+//   console.log(num);
+// }
+
+// inverseNumber(12313);
 //! Func15. isPalindrom(N) mantiqiy funksiyasini hosil qiling. (N > 0). Agar N soni palindrom bo'lsa - true, aks holda false qiymat qaytarilsin. inverseNumber funksiyasidan foydalaning. Palindromik son - chapda ham, o’ngdan ham o’qilganda bir xil bo’ladigan son. Masalan, 123321, 78987. QY
 // isPalindrom(1678761) => true
 
